@@ -4,7 +4,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Request Postman Echo GET
-        uses: ./
+        uses: satak/webrequest-action@master
         with:
-          url: 'https://api.glacierclient.net/update'
-          method: 'GET'
+          url: https://my-json-server.typicode.com/typicode/demo/posts
+          method: GET
