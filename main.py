@@ -17,6 +17,7 @@ import json
 import discord
 import paypalrestsdk
 from starlette.requests import Request
+import os
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -93,9 +94,14 @@ async def startup_event():
   asyncio.create_task(client.start('OTQ0Nzc3OTM0OTE1Mzk5Njkx.GG7FnP.09BePYF6tn5AYPpkyk8mnHyoGtVxpGSJS-DiGQ'))
 
 
-@app.get("/", tags=["root"])
+@app.get("/", tags=["root"]
 async def root():
-    return RedirectResponse(url='https://www.glacierclient.net')
+    return RedirectResponse(url='https://www.glacierclient.net'))
+
+@app.get("/update", tags=["root"]
+async def update():
+    os.system("git pull")
+    return "200 ok"
 
 @app.get("/favicon.ico", tags=["root"])
 async def favicon():
