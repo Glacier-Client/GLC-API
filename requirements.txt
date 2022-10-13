@@ -4,3 +4,4 @@ starlette
 uvicorn
 fastapi
 discord.py
+asyncio
