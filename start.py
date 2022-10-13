@@ -1,4 +1,6 @@
 import os
+print("checking installed:")
+os.system("apt install python3-pip -y")
 print("Starting update:")
 print("Pulling git:")
 os.system("git pull")
