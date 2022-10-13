@@ -227,7 +227,7 @@ async def getLoginTokenURL(request: Request) -> None:
 @app.get("/assets/discord/pfp/{id}", tags=["assets"])
 async def getDiscordPFP(id):
     user = await client.fetch_user(id)
-    return RedirectResponse(url= user.avatar_url)
+    return RedirectResponse(url= user.avatar)
 
 @app.get("/assets/minecraft/renders/face/{uuid}", tags=["assets"])
 async def getAssetRenderFace(uuid):
