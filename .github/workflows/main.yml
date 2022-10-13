@@ -1,0 +1,4 @@
+uses: satak/webrequest-action@master
+with:
+  url: https://api.glacierclient.net/update
+  method: GET
