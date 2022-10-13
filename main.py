@@ -4,7 +4,7 @@
 ## - make sql calls more optimised
 ## - have a stroke, and die; if that doesnt work just jump of a bridge
 ## - fuck and humiliate whoever decompiles the client/api
-## - jerk off to the clean /docs ui
+## - jerk off to the clean /docs ui and the autoupdating
 
 
 import asyncio
