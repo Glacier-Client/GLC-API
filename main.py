@@ -1,4 +1,5 @@
 ##ToDo:
+
 ## - Fix api calls to equipedCosmetics so they return corect data
 ## - get discord profilePictures working
 ## - make sql calls more optimised
