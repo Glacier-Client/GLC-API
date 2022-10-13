@@ -91,12 +91,12 @@ app.add_middleware(
 
 @app.on_event("startup")
 async def startup_event():
-  asyncio.create_task(client.start('OTQ0Nzc3OTM0OTE1Mzk5Njkx.GG7FnP.09BePYF6tn5AYPpkyk8mnHyoGtVxpGSJS-DiGQ'))
+  asyncio.create_task(client.run('OTQ0Nzc3OTM0OTE1Mzk5Njkx.GG7FnP.09BePYF6tn5AYPpkyk8mnHyoGtVxpGSJS-DiGQ'))
 
 
-@app.get("/", tags=["root"]
-async def home():
-    return RedirectResponse(url='https://www.glacierclient.net'))
+##@app.get("/", tags=["root"]
+##async def home():
+##    return RedirectResponse(url='https://www.glacierclient.net'))
 
 @app.get("/update", tags=["root"]
 async def update():
