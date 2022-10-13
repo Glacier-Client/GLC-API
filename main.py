@@ -96,7 +96,7 @@ async def startup_event():
 
 @app.get("/", tags=["root"])
 async def home():
-    return RedirectResponse(url='https://www.glacierclient.net'))
+    return RedirectResponse(url='https://www.glacierclient.net')
 
 @app.get("/update", tags=["root"])
 async def update():
