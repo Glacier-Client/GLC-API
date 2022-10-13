@@ -18,7 +18,9 @@ import discord
 import paypalrestsdk
 from starlette.requests import Request
 
-client = discord.Client()
+intents = discord.Intents.default()
+intents.message_content = True
+client = discord.Client(intents=intents)
 
 tags_metadata = [
     {
