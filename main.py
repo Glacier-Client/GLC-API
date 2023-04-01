@@ -339,6 +339,11 @@ async def getCurrentVersion():
     retunedData = mysqlQuery(f"SELECT * FROM `version` ORDER BY id DESC LIMIT 0, 1")
     return {"ver" : retunedData[0][1], "verLong" : retunedData[0][2], "download" : retunedData[0][3]}
     
+@client.event
+async def on_ready():
+    await tree.sync(guild=discord.Object(id=Your guild id))
+    print("Ready!")    
+
 @tree.command(name = "hello", description = "test to see if the bot is online", guild=discord.Object(id=844103669313175572))
 async def first_command(interaction):
     await interaction.response.send_message("Hello, World!")
