@@ -16,6 +16,7 @@ from typing import List
 import mysql.connector
 import json
 import discord
+from discord import app_commands
 import paypalrestsdk
 from starlette.requests import Request
 import os
@@ -23,6 +24,7 @@ import os
 intents = discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
+tree = app_commands.CommandTree(client)
 
 tags_metadata = [
     {
@@ -336,3 +338,7 @@ async def websocket_endpoint(websocket: WebSocket):
 async def getCurrentVersion():
     retunedData = mysqlQuery(f"SELECT * FROM `version` ORDER BY id DESC LIMIT 0, 1")
     return {"ver" : retunedData[0][1], "verLong" : retunedData[0][2], "download" : retunedData[0][3]}
+    
+@tree.command(name = "hello", description = "test to see if the bot is online", guild=discord.Object(id=844103669313175572))
+async def first_command(interaction):
+    await interaction.response.send_message("Hello, World!")
