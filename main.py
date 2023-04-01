@@ -341,7 +341,7 @@ async def getCurrentVersion():
     
 @client.event
 async def on_ready():
-    await tree.sync(guild=discord.Object(id=Your guild id))
+    await tree.sync(guild=discord.Object(id=844103669313175572))
     print("Ready!")    
 
 @tree.command(name = "hello", description = "test to see if the bot is online", guild=discord.Object(id=844103669313175572))
