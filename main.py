@@ -55,8 +55,8 @@ tags_metadata = [
 
 paypalrestsdk.configure({
   "mode": "sandbox", # sandbox or live
-  "client_id": "AXN5yyxphtBu0Wk_hUBiLvUPUf1GqwiXGED8ty_AhBT7wfM1cXOhN3UbYnNd_f8r-ndkzUKgfp94F9V5",
-  "client_secret": "EBQTXBBuDw0QeoTfE4DcAzsSrHYIC5It3tDCiB9r7bfVInR5WCchoqorEQkBE1Q_VNno4niuEL9pjEUe" })
+  "client_id": "",
+  "client_secret": "" })
 
 class create_dict(dict):
     def __init__(self):
@@ -73,7 +73,7 @@ def mysqlQuery(q):
     return result
 
 def mysqlQueryInsert(q):
-    mydb = mysql.connector.connect(host="hestia.engelbrecht.pro", user="SpyMiner_GLC", password="Password1", database="SpyMiner_GLC")
+    mydb = mysql.connector.connect(host="", user="", password="", database="SpyMiner_GLC")
     cursor = mydb.cursor()
     cursor.execute(q)
     mydb.commit()
@@ -94,7 +94,7 @@ app.add_middleware(
 
 @app.on_event("startup")
 async def startup_event():
-  asyncio.create_task(client.start('OTQ0Nzc3OTM0OTE1Mzk5Njkx.GG7FnP.09BePYF6tn5AYPpkyk8mnHyoGtVxpGSJS-DiGQ'))
+  asyncio.create_task(client.start(''))
 
 
 @app.get("/", tags=["root"])
