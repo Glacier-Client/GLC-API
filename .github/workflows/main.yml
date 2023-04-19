@@ -1,10 +1,1 @@
-on: [push, pull_request]
-jobs:
-  request:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Request Postman Echo GET
-        uses: satak/webrequest-action@master
-        with:
-          url: https://api.glacierclient.net/update
-          method: GET
+
